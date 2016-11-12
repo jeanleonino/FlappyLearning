@@ -9,6 +9,14 @@ var speed = function(fps){
 	FPS = parseInt(fps);
 }
 
+var doubleSpeed = function(){
+	FPS = 2 * FPS;
+}
+
+var halfSpeed = function(){
+	FPS = FPS / 2;
+}
+
 var loadImages = function(sources, callback){
 	var nb = 0;
 	var loaded = 0;
@@ -112,7 +120,7 @@ var Game = function(){
 	this.generation = 0;
 	this.backgroundSpeed = 0.5;
 	this.backgroundx = 0;
-    this.maxScore = 0;
+  this.maxScore = 0;
 }
 
 Game.prototype.start = function(){
@@ -197,7 +205,7 @@ Game.prototype.update = function(){
 	}
 
 	this.score++;
-    this.maxScore = (this.score > this.maxScore) ? this.score : this.maxScore;
+  this.maxScore = (this.score > this.maxScore) ? this.score : this.maxScore;
 	var self = this;
 	setTimeout(function(){
 		self.update();
@@ -252,10 +260,10 @@ Game.prototype.display = function(){
 
 window.onload = function(){
 	var sprites = {
-		bird:"./img/bird.png",
-		background:"./img/background.png",
-		pipetop:"./img/pipetop.png",
-		pipebottom:"./img/pipebottom.png"
+		bird:"./assets/img/bird.png",
+		background:"./assets/img/background.png",
+		pipetop:"./assets/img/pipetop.png",
+		pipebottom:"./assets/img/pipebottom.png"
 	}
 
 	var start = function(){

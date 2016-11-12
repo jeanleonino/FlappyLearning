@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NeuroEvolution : Flappy Bird</title>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <link rel="stylesheet" href="assets/font-awesome.min.css">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+<div class="wrapper"> 
+  <header>
+    <h1>
+      Flappy Learning 
+      <span class="badges">
+        <img src="https://img.shields.io/github/stars/xviniette/FlappyLearning.svg">
+      </span>
+    </h1>
+    <span class="subtitle">Program that learns to play Flappy Bird by machine learning</span>
+  </header>
+
+  <div class="gamepad">
+    <div class="top"><p>score, speed, generation, birds alive</p></div>
+    <div class="left">
+      <canvas id="flappy" width="500" height="512"></canvas>
+    </div>
+    <div class="right">
+
+      <div><h2>controls</h2></div>
+      <div class="controls">
+        <h4>actions</h4>
+        <a class="btn" onclick="halfSpeed()"><i class="fa fa-backward" aria-hidden="true"></i></a>
+        <a class="btn" onclick="doubleSpeed()"><i class="fa fa-forward" aria-hidden="true"></i></a>
+
+        <a class="btn" onclick=""><i class="fa fa-times" aria-hidden="true"></i> end generation</a>
+        <a class="btn" onclick=""><i class="fa fa-repeat" aria-hidden="true"></i> reset game</a>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    Created by <a href="http://www.bazia.net/" target="_blank"></a>Vincent Bazia, you can star, fork or open an issue on the <a href="http://github.com/xviniette/FlappyLearning" target="_blank">GitHub Repository</a>.
+  </footer>
+</div>
+  <script src="Neuroevolution.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
